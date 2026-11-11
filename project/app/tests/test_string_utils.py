@@ -14,3 +14,24 @@ def test_concatenate_strings_strip_whitespaces():
     expected = '1 2654'
     actual = concatenate_strings(string_1, string_2)
     assert expected == actual
+
+def test_concatenate_strings_empty():
+    string_1 = ''
+    string_2 = ''
+    expected = ' '
+    actual = concatenate_strings(string_1, string_2)
+    assert expected == actual
+
+def test_concatenate_strings_empty_first():
+    string_1 = ''
+    string_2 = '5'
+    expected = ' 5'
+    actual = concatenate_strings(string_1, string_2)
+    assert expected == actual
+
+def test_concatenate_strings_empty_second():
+    string_1 = '5'
+    string_2 = ''
+    expected = '5 '
+    actual = concatenate_strings(string_1, string_2)
+    assert expected == actual
